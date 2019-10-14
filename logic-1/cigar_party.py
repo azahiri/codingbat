@@ -6,7 +6,7 @@ def cigar_party(cigars, is_weekend):
     bound on the number of cigars. Return True if the party with the given
     values is successful, or False otherwise.
     """
-    return is_weekend or (not is_weekend and 40 <= cigars <= 60)
+    return (is_weekend and 40 <= cigars) or (not is_weekend and 40 <= cigars <= 60)
 
 print(cigar_party(30, False))
 print(cigar_party(40, False))
